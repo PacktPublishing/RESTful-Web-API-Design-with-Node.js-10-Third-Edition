@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Item</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js "></script>
+  <script>
+  $(document).ready(function() {
+    $('#btnDelete').click(function () {
+      $.ajax({
+        contentType: 'application/json',
+        url: 'http://localhost:3000/catalog/v2/item/3',
+        type: 'DELETE',
+        success: function (item, status, xhr) {
+            if (status === 'success') {
+              $('#item').text('Deleted');
+              $('#price').text('Deleted');
+              $('#categories').text('Deleted');
+            }
+        }
+        ,error: function (xhr, options, error) {
+          alert('Unable to delete item');
+        }
+      });
+    });
+
+    $.ajax({
+      contentType: 'application/json',
+      url: 'http://localhost:3000/catalog/v2/item/3',
+      type: 'GET',
+      success: function (item, status, xhr) {
+          if (status === 'success') {
+            $('#item').text(item.itemName);
+            $('#price').text(item.price + ' ' + item.currency);
+            $('#categories').text(item.categories);
+          }
+      }
+      ,error: function (xhr, options, error) {
+        alert('Unable to load details');
+      }
+    });
+  });
+
+  </script>
+  <div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Item: </div>
+      <div><span id="item"/></div>
+    </div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Price: </div>
+      <div><span id="price"/></div>
+    </div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Categories: </div>
+      <div><span id="categories"/></div>
+    </div>
+    <div><input type="button" id="btnDelete" value="Delete"/></div>
+  </div>
+</body>
+</html>

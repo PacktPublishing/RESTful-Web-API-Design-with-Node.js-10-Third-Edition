@@ -1,0 +1,18 @@
+{"catalog" : [{
+    "categoryName" : "Watches",
+    "categoryId" : "1",
+    "itemsCount" : 2,
+    "items" : [{
+            "itemId" : "item-identifier-1",
+            "itemName":"Sports Watch",
+            "price": 150,
+            "currency" : "EUR"
+     },
+     {
+             "itemId" : "item-identifier-2",
+             "itemName":"Waterproof Sports Watch",
+             "price": 180,
+             "currency" : "EUR"
+    }]
+}]
+}

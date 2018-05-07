@@ -1,0 +1,703 @@
+  {
+    "swagger": "2.0",
+    "info": {
+      "title": "Catalog API Documentation",
+      "version": "v1"
+    },
+    "paths": {
+      "/catalog/{categoryId}": {
+        "get": {
+          "operationId": "getCategoryV2",
+          "summary": "Get all items for a category ",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json": [
+                  {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  },
+                  {
+                    "_id": "5a4c0b7aad0ebbce584593ee",
+                    "itemId": "2",
+                    "itemName": "Sports Watch 2",
+                    "price": 100,
+                    "currency": "USD",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+                ]
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        }
+      },
+      "/catalog/v1/{categoryId}": {
+        "get": {
+          "operationId": "getCategoryV1",
+          "summary": "Get all items for a category ",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json": [
+                  {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  },
+                  {
+                    "_id": "5a4c0b7aad0ebbce584593ee",
+                    "itemId": "2",
+                    "itemName": "Sports Watch 2",
+                    "price": 100,
+                    "currency": "USD",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+                ]
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        }
+      },
+      "/catalog/v2/{categoryId}": {
+        "get": {
+          "operationId": "getCategoryV2",
+          "summary": "Get all items for a category ",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json": [
+                  {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  },
+                  {
+                    "_id": "5a4c0b7aad0ebbce584593ee",
+                    "itemId": "2",
+                    "itemName": "Sports Watch 2",
+                    "price": 100,
+                    "currency": "USD",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+                ]
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        }
+      },
+      "/catalog/item/{itemId}": {
+        "get": {
+          "operationId": "getItemV2",
+          "summary": "Get an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json": {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        },
+        "post": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "postItemV2",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        },
+        "put": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "putItemV2",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        },
+        "delete": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "deleteItemV2",
+          "summary": "Deletes an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "deleted": true
+            },
+            "500": "text/html"
+          }
+        }
+      },
+      "/catalog/v1/item/{id}": {
+        "get": {
+          "operationId": "getItemV1",
+          "summary": "Get an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json": {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        },
+        "post": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "postItemV1",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        },
+        "put": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "putItemV1",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        },
+        "delete": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "deleteItemV1",
+          "summary": "Deletes an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "deleted": true
+            },
+            "500": "text/html"
+          }
+        }
+      },
+      "/catalog/v2/item/{id}": {
+        "get": {
+          "operationId": "getItemV2",
+          "summary": "Get an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 OK",
+              "examples": {
+                "application/json":
+                  {
+                    "_id": "5a4c004b0eed73835833cc9a",
+                    "itemId": "1",
+                    "itemName": "Sports Watch",
+                    "price": 100,
+                    "currency": "EUR",
+                    "__v": 0,
+                    "categories": [
+                      "Watches",
+                      "Sports Watches"
+                    ]
+                  }
+              }
+            },
+            "404": {
+              "description": "404 Not Found"
+            },
+            "500": {
+              "description": "500 Internal Server Error"
+            }
+          }
+        },
+        "post": {
+          "operationId": "postItemImageV2",
+          "summary": "Provide image for existing item",
+          "produces": [
+            "image/jpeg"
+          ],
+          "responses": {
+            "200": {
+              "404": {
+                "description": "404 Not Found"
+              },
+              "500": {
+                "description": "500 Internal Server Error"
+              },
+              "description": "200 OK",
+              "examples": {
+                "image/jpeg": "image"
+              }
+            }
+          }
+        },
+        "put": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "putItemV2",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        },
+        "delete": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "deleteItemV2",
+          "summary": "Deletes an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "deleted": true
+            },
+            "500": "text/html"
+          }
+        }
+      },
+      "/catalog/v2/item/{id}/image": {
+        "get": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "getItemImageV2",
+          "summary": "Get an image bound to an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": "application/jpeg"
+          }
+        },
+        "post": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "postItemImageV2",
+          "summary": "Creates or updates an image bound to an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": "application/jpeg"
+          }
+        },
+        "put": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "putItemV2",
+          "summary": "Creates or updates an image bound to an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": "application/jpeg"
+          }
+        },
+        "delete": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "deleteItemV2",
+          "summary": "Creates or updates an image bound to an existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": "application/jpeg"
+          }
+        }
+      },
+      "/catalog/item/": {
+        "post": {
+          "404": {
+            "description": "404 Not Found"
+          },
+          "500": {
+            "description": "500 Internal Server Error"
+          },
+          "operationId": "postItemV21",
+          "summary": "Creates new or updates existing item",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "201": {
+              "itemId": 19,
+              "itemName": "Sports Watch 19",
+              "price": 100,
+              "currency": "USD",
+              "__v": 0,
+              "categories": [
+                "Watches",
+                "Sports Watches"
+              ]
+            },
+            "500": "text/html"
+          }
+        }
+      },
+      "/catalog/v1/item/": {
+        "post": {
+           "operationId": "postItemV1",
+           "summary": "Create new or update  existing item",
+           "produces": [
+             "image/jpeg"
+           ],
+           "responses": {
+             "200": {
+               "description": "200 OK",
+               "examples": {
+                 "application/json":
+                   {
+                     "_id": "5a4c004b0eed73835833cc9a",
+                     "itemId": "1",
+                     "itemName": "Sports Watch",
+                     "price": 100,
+                     "currency": "EUR",
+                     "__v": 0,
+                     "categories": [
+                       "Watches",
+                       "Sports Watches"
+                     ]
+                   }
+               }
+             },
+             "404": {
+               "description": "404 Not Found"
+             },
+             "500": {
+               "description": "500 Internal Server Error"
+             }
+           }
+         }
+      },
+      "/catalog/v2/item/": {
+        "post": {
+           "operationId": "postItemV2",
+           "summary": "Create new or update  existing item",
+           "produces": [
+             "image/jpeg"
+           ],
+           "responses": {
+             "200": {
+               "description": "200 OK",
+               "examples": {
+                 "application/json":
+                   {
+                     "_id": "5a4c004b0eed73835833cc9a",
+                     "itemId": "1",
+                     "itemName": "Sports Watch",
+                     "price": 100,
+                     "currency": "EUR",
+                     "__v": 0,
+                     "categories": [
+                       "Watches",
+                       "Sports Watches"
+                     ]
+                   }
+               }
+             },
+             "404": {
+               "description": "404 Not Found"
+             },
+             "500": {
+               "description": "500 Internal Server Error"
+             }
+           }
+         }
+      }
+    },
+    "consumes": [
+      "application/json"
+    ]
+  }

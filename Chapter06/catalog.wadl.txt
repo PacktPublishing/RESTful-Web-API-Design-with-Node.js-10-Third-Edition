@@ -1,0 +1,38 @@
+<application xmlns="http://wadl.dev.java.net/2009/02" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:service="http://localhost:8080/catalog/"> 
+<grammer> 
+<include href="items.xsd"/> 
+<include href="error.xsd"/> 
+</grammer> 
+<resources base="http://localhost:8080/catalog/"> 
+<resource path="{categoryId}"> 
+<method name="GET"> 
+<request> 
+<param name="category" type="xsd:string" style="template"/> 
+</request> 
+<response status="200"> 
+<representation mediaType="application/xml" element="service:item"/> 
+<representation mediaType="application/json" /> 
+</response> 
+<response status="404"> 
+<representation mediaType="text/plain" element="service:item"/> 
+</response> 
+</method>
+</resource>
+<resource path="/v2/{categoryId}"> 
+<method name="GET"> 
+<request> 
+<param name="category" type="xsd:string" style="template"/> 
+</request> 
+<response status="200"> 
+<representation mediaType="application/xml" element="service:item"/> 
+<representation mediaType="application/json" /> 
+</response> 
+<response status="404"> 
+<representation mediaType="text/plain" element="service:item"/> 
+</response> 
+</method>
+</resource> 
+</resources> 
+</application>

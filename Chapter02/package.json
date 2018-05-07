@@ -1,0 +1,14 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "Simple hello world http handler",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Valentin Bojinov",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0"
+  }
+}

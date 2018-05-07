@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Item</title>
+<script>
+
+</script>
+
+</head>
+<body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js "></script>
+  <script>
+
+  $(document).ready(function() {
+    $('#btnCreate').click(function(){
+      var newItem = {
+        itemId: 4,
+        itemName: "Sports Watch 11",
+        price: "199",
+        currency: "EUR",
+        categories: [
+          "Watches"
+        ]
+      };
+      $.ajax({
+        url: "http://localhost:3000/catalog/v2/",
+        type: "POST",
+        dataType: "json",
+        data: JSON.stringify(newItem),
+        success: function (item, status, xhr) {
+              alert(status);
+            }
+      });
+    })
+  });
+
+  </script>
+  <div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Id: </div>
+      <div><input type="text" id="id"/></div>
+
+      <div style="float:left; width: 80px;">Item: </div>
+      <div><input type="text" id="item"/></div>
+    </div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Price: </div>
+      <div><input type="text" id="price"/></div>
+    </div>
+    <div style="position: relative">
+      <div style="float:left; width: 80px;">Categories: </div>
+      <div><input type="text" id="categories"/></div>
+    </div>
+    <div><input type="button" id="btnCreate" value="Create"/></div>
+  </div>
+</body>
+</html>

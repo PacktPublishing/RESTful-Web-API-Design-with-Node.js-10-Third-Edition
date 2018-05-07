@@ -1,0 +1,315 @@
+<application
+    xmlns="http://wadl.dev.java.net/2009/02"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:service="http://localhost:8080/catalog/">
+    <grammer>
+        <include href="items.xsd"/>
+        <include href="error.xsd"/>
+    </grammer>
+    <resources base="http://localhost:8080/catalog/">
+        <resource path="/catalog/{categoryId}">
+            <method name="GET">
+                <request>
+                    <param name="category" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/v1/{categoryId}">
+            <method name="GET">
+                <request>
+                    <param name="categoryId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/v2/{categoryId}">
+            <method name="GET">
+                <request>
+                    <param name="categoryId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/item/{itemId}">
+            <method name="GET">
+                <request>
+                    <param name="category" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="PUT">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="POST">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="DELETE">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/v1/item/{itemId}">
+            <method name="GET">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="POST">
+                <request>itemId
+                    <param name="category" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="PUT">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="DELETE">
+                <request>
+                    <param name="category" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/v2/item/{itemId}">
+            <method name="GET">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="PUT">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="POST">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="DELETE">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+        <resource path="/catalog/v2/item/{itemId}/image">
+            <method name="GET">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="POST">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="PUT">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="201">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+            <method name="DELETE">
+                <request>
+                    <param name="itemId" type="xsd:string" style="template"/>
+                </request>
+                <response status="200">
+                    <representation mediaType="application/json" />
+                </response>
+                <response status="404">
+                    <representation mediaType="text/plain" />
+                </response>
+                <response status="500">
+                    <representation mediaType="text/plain" />
+                </response>
+            </method>
+        </resource>
+    </resources>
+</application>
