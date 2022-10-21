@@ -29,3 +29,7 @@ request.params.categoryId);
 * [Mastering Node.js - Second Edition](https://www.packtpub.com/web-development/mastering-nodejs-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785888960)
 
 * [Learning Node.js Development](https://www.packtpub.com/web-development/learning-nodejs-development?utm_source=github&utm_medium=repository&utm_campaign=9781788395540)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781788623322">https://packt.link/free-ebook/9781788623322 </a> </p>
